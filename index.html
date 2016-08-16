@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Pot of Greed</title>
+	<script>
+var beginnings = ["", "IN ORDER TO DRAW TWO MORE CARDS,", "BECAUSE I WISH TO INCREASE THE CARDS IN MY HAND", "I WISH TO DRAW CARDS, SO"];
+var action = ["I WILL START MY TURN BY PLAYING", "I BEGIN MY TURN BY PLAYING", "I WILL PLAY THE CARD", "I PLAY THE MAGIC CARD", "I CHOOSE TO PLAY THE CARD", "I PLAY"];
+var cardType = ["","THE CARD", "THE MAGIC CARD,", "THE CARD CALLED", "THE CARD NAMED"];
+var reason = ["WHICH ALLOWS ME TO", "WHICH LETS ME", "WHICH CAUSES ME TO", "WHICH GRANTS THE ABILITY TO", "SO I CAN", "WHICH READS:", "WHICH STATES:"];
+var number = ["TWO", "THE NEXT TWO", "ANOTHER TWO", "THE TOP TWO", "TWO MORE", "TWO NEW", "TWO ADDITIONAL", "TWO EXTRA", "EXACTLY TWO"];
+var endings = ["", "FROM MY DECK", "FROM THE TOP OF MY DECK", "FROM THE REMAINING CARDS IN MY DECK", "FROM THE REST OF MY DECK"];
+
+function pickRandom(arr) {
+  return arr[Math.floor(Math.random() * arr.length)];
+}
+
+function spew() {
+  var output = document.getElementById("output");
+
+  for (var i = 0; i < 50; i ++)
+  {
+    output.innerHTML += (" " + pickRandom(beginnings) + " " + pickRandom(action) + " " + pickRandom(cardType) + " <b>POT OF GREED</b>, " + pickRandom(reason) + " DRAW " + pickRandom(number) + " CARDS " + pickRandom(endings) + ".");
+  }
+}
+    </script>
+  </head>
+  <body>
+    <center><img src="http://vignette1.wikia.nocookie.net/yugioh/images/8/82/PotofGreed-TF04-JP-VG.jpg"></center>
+    <p style="font-size: 200%">My turn.  I play <b>POT OF GREED</b>!</p>
+	<p><input type="button" value="What does that do?" style="font-size: 200%" onclick="spew()"></p>
+	<p id="output" style="font-size: 125%"></p>
+  </body>
+</html>
