@@ -3,7 +3,13 @@
   <head>
     <meta charset="UTF-8">
     <title>Pot of Greed</title>
-	<script>
+  </head>
+  <body>
+    <div style="text-align: center"><img src="PotOfGreed.jpg" width="544" height="544"></div>
+    <p style="font-size: 200%">My turn. I play <b>POT OF GREED</b>!</p>
+    <div><input type="button" value="What does that do?" style="font-size: 200%" onclick="spew()"></div>
+    <p id="output" style="font-size: 125%"></p>
+    <script>
 var beginnings = ["", "IN ORDER TO DRAW TWO MORE CARDS,", "BECAUSE I WISH TO INCREASE THE CARDS IN MY HAND", "I WISH TO DRAW CARDS, SO"];
 var action = ["I WILL START MY TURN BY PLAYING", "I BEGIN MY TURN BY PLAYING", "I WILL PLAY THE CARD", "I PLAY THE MAGIC CARD", "I CHOOSE TO PLAY THE CARD", "I PLAY"];
 var cardType = ["","THE CARD", "THE MAGIC CARD,", "THE CARD CALLED", "THE CARD NAMED"];
@@ -24,11 +30,5 @@ function spew() {
   }
 }
     </script>
-  </head>
-  <body>
-    <center><img src="https://vignette1.wikia.nocookie.net/yugioh/images/8/82/PotofGreed-TF04-JP-VG.jpg"></center>
-    <p style="font-size: 200%">My turn.  I play <b>POT OF GREED</b>!</p>
-	<p><input type="button" value="What does that do?" style="font-size: 200%" onclick="spew()"></p>
-	<p id="output" style="font-size: 125%"></p>
   </body>
 </html>
